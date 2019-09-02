@@ -1,0 +1,62 @@
+#Linux学习笔记#
+
+
+##part 1.一些命令和热键##
+显示日期与时间的命令：date
+显示日历的命令：cal
+简单计算器：bc
+常用关机命令：shutdow
+重启、关机：reboot halt poweroff
+【Tab热键】命令补全  文件补全
+【Ctrl C】结束当前运行进程
+【Ctrl D】结束键盘输入 可以用来代替exit的输入
+
+man page：操作说明
+                                                               man页面的几个分类		
+                                       NAME          简短的命令、数据名称说明
+                                       SYNOPSIS	     简短的命令执行语法简介
+                                       DESCRIPTION   较为完整的说明，这部分最好仔细看看
+                                       OPTIONS       针对SYNOPSIS部分中，有列举的所有可用的选项说明
+                                       COMMANDS      当这个程序在执行的时候，可以在此程序中执行命令
+                                       FILES         这个程序或者数据所使用的相关的其他说明
+                                       SEE ALSO      这个命令或数据有相关的其他说明
+                                       EXAMPLE	     一些可以参考的范例
+                                       BUGS          是否有相关的错误
+man page操作键：				page down向上翻页
+							page up向下翻页
+							home去到第一页
+							end去到最后一页
+							/string 向下查询string字符串，如/wxz
+							？string向上查询字符串
+							n，N查询字符串时显示下一个字符结果
+							q 退出
+
+
+##part 2：Linux文件、目录和磁盘格式##
+1.linux文件属性：第一列  文件的类型和权限   -文件  d目录 r可读 w可写 x可执行 
+				第二列  表示有多少文件名连接到此节点  l连接文件
+				第三列  文件所有者的账号  
+				第四列  所属用户组
+				第五列  文件的容量大小 默认B
+				第六列  文件的创建文件日期或修改日期
+				第七列  文件名
+		实例：-rwx-r--r--   l  root  root  238  Jun 19 17:08   text.txt
+
+2.修改文件的属性和权限 ：chgrp改变文件所属的用户组
+					   chown改变文件所有者
+					   chmod改变文件的权限  r权限分4  w权限分2  x权限分1 
+
+3.Linux目录配置标准：FHS
+														目录定义交互形态表
+										     可分享的                          不可分享的
+										     /usr（软件放置处)				  /etc（配置文件）
+							不变的			 /opt（第三方软件）				  /boot（开机与内核文件）
+											 /var/mail（用户邮件信箱）		  /var/run（程序相关）
+							可变动的			 /var/spoo/news（新闻组）		  /var/lock（程序相关）
+ 不可以与根目录分开的目录：    /etc  配置文件
+ 							 /bin  重要执行文件
+ 							 /dev  所需要的设备文件
+ 							 /lib  执行文件所需的函数库与内核所需的模块
+ 							 /sbin 重要的系统执行文件
+ 
+
