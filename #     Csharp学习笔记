@@ -1,0 +1,56 @@
+#     Csharp学习笔记    #
+.net dotnet Microsoft新一代语言的开发平台，用于构建和运行应用程序
+mono  是Novell公司开发的支持在其他操作系统上开发.NET程序的框架
+Unity借助Mono实现跨平台 核心是.NET Framework框架
+
+代码对齐快捷键Ctrl+K+F  在VS里面用#region可以把一段代码折叠起来 快速注释一段代码Ctrl+K+C，取消注释Ctrl+K+U 
+快速创建构造器：ctor 按两次Tab键
+
+#     Csharp语法    #
+
+##构成Csharp语言的基本元素
+-关键字（keyword）
+-操作符（Operator
+-标识符（Identifier）
+Console是一个类 [工具]	Console.后的WriteLine/ReadLine就是方法/函数  Console.后的名词就是属性（它的标志是一个小扳手）
+
+###变量  命名规则：看见变量名就知道意思
+变量在使用之前必须赋值
+变量声明的含义就是在内存中开辟一片空间 赋值就是在声明的空间里放数据
+数据类型转换：1.Prase转换：string类型转换成其他数据类型
+2.Tostring转换：转换成任意类型的数据
+
+
+##类型在C#语言中的作用  在一个C#类型中包含信息包括有：存储此类型变量所需的内存空间的大小
+												  此类型的值可表示的最大、最小值范围
+												  此类型所包含的成员（如方法、属性、事件等）
+					   此类型由何基类派生而来
+					   程序运行的时候，此类型的变量被分配在内存的什么位置
+					   -Stack简介
+					   -stack overflow
+					   -Heap简介
+					   -使用Performance Monitor查看进程的对内存使用量
+					   -关于内存泄漏
+					   此类型所允许的操作（运算）
+
+
+##  C#的五大数据类型
+-类（class）如：window，form，conso
+-结构体（structus）:如int32，int64，Single
+-枚举（Enumerations）：如HorizonAlignmen，Visibility
+-接口（Inferface）
+-委托（Delegates）
+
+
+##Csharp中类、对象  在现实中通常说作对象  在程序中成为实例
+类的三大成员：属性（property）存储数据，组合起来表示类或对象当前的状态
+方法（Method）-由C语言中的函数（function）转变而来，表示类或对象能做什么    
+             -工作中90%的时间都是与方法打交道，因为它是“真正做事”、“构成逻辑”的成员
+事件（Event） 类或对象通知其他类或对象的重要机制，为C#独有（Java通过其他方法实现这个机制）
+             -******善用事件机制很重要
+
+
+###静态成员（Stati）成员在语义上表示它是“类的成员”
+实例（非静态）成员在语义表示它是“对象的成员”
+绑定（Binding）指的是编译器如果把一个成员与类或对象关联起来
+
